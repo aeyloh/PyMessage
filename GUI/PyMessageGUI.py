@@ -5,32 +5,31 @@
 
 #Importing main tkinter libs
 import tk as tkinter
-from tkinter import Tk
+from tkinter import Tk, Menu
+
+#Importing functions
+from GUIFunctions import emptyFunction
 
 class Window:
     #Defining settings upon initialization
     def __init__(self, master):
-        self.master = self
-        self.init_window()
-
-    #Creation of init_window
-    def init_window(self):
+        self.master = master
 
         #Changing title of the window
-        self.master.title("PyMessage v0.0.1")
+        master.title("PyMessage v0.0.1")
 
         #Creating a menu instance
-        menu = Menu(self.master)
-        self.master.config(menu = menu)
+        menu = Menu(master)
+        master.config(menu = menu)
 
         file = Menu(menu, tearoff = 0)
         option = Menu(menu, tearoff = 0)
         about = Menu(menu, tearoff = 0)
 
         #Adding commands to 'File' section of toolbar
-        file.add_command(label = "Open", command = self.openFileDialog)
+        file.add_command(label = "Open", command = emptyFunction())
         file.add_separator()
-        file.add_command(label = "Exit", command = self.exitProgram)
+        file.add_command(label = "Exit", command = emptyFunction())
 
         #Adding all options to the toolbar
         menu.add_cascade(label = "File", menu = file)
