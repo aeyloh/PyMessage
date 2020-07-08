@@ -4,8 +4,6 @@
 #July 7th, 2020
 
 #Importing main tkinter libs
-#import tk as tkinter
-#from tkinter import Tk, Menu
 from tkinter import *
 
 #Importing functions
@@ -23,6 +21,7 @@ class Window:
         menu = Menu(master)
         master.config(menu = menu)
 
+        #Menu Configuration
         file = Menu(menu, tearoff = 0)
         option = Menu(menu, tearoff = 0)
         about = Menu(menu, tearoff = 0)
@@ -31,6 +30,17 @@ class Window:
         file.add_command(label = "Open", command = emptyFunction)
         file.add_separator()
         file.add_command(label = "Exit", command = exitProgram)
+        #Adding commands to 'Options' section of toolbar
+        option.add_command(label = "Change Username", command = emptyFunction)
+        #Adding commands to 'About' section of toolbar
+        about.add_command(label = "Aeyloh")
+        file.add_separator()
+        about.add_command(label = "Twitter", command = emptyFunction)
+        file.add_separator()
+        about.add_command(label = "NorthHopper")
+        file.add_separator()
+        about.add_command(label = "Twitter", command = lambda:openTwitterHopper)
+        file.add_separator()
 
         #Adding all options to the toolbar
         menu.add_cascade(label = "File", menu = file)
