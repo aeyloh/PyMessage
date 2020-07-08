@@ -4,11 +4,12 @@
 #July 7th, 2020
 
 #Importing main tkinter libs
-import tk as tkinter
-from tkinter import Tk, Menu
+#import tk as tkinter
+#from tkinter import Tk, Menu
+from tkinter import *
 
 #Importing functions
-from GUIFunctions import emptyFunction
+from GUIFunctions import *
 
 class Window:
     #Defining settings upon initialization
@@ -27,13 +28,14 @@ class Window:
         about = Menu(menu, tearoff = 0)
 
         #Adding commands to 'File' section of toolbar
-        file.add_command(label = "Open", command = emptyFunction())
+        file.add_command(label = "Open", command = emptyFunction)
         file.add_separator()
-        file.add_command(label = "Exit", command = emptyFunction())
+        file.add_command(label = "Exit", command = exitProgram)
 
         #Adding all options to the toolbar
         menu.add_cascade(label = "File", menu = file)
         menu.add_cascade(label = "Options", menu = option)
+        menu.add_cascade(label = "About", menu = about)
 
 #Not sure what this does, sometimes people put it at the beginning of the program
 #but it works here too
