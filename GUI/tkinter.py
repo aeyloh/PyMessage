@@ -1,4 +1,4 @@
-#Py(i)Message GUI
+#PyMessage GUI
 #Rylee Carter
 #July 7th, 2020
 
@@ -44,7 +44,7 @@ class Window(Frame):
         file.add_command(label = "Exit", command = self.exitProgram)
         #Adding the 'File' option to the toolbar
         menu.add_cascade(label = "File", menu = file)
-        
+
         #Not sure what this does, sometimes people put it at the beginning of the program
         #but it works here too
         root = Tk()
