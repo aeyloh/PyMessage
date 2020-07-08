@@ -1,6 +1,7 @@
 #PyMessage GUI
 #Rylee Carter
 #July 7th, 2020
+# ur mom gay
 #Importing main tkinter libs
 from tkinter import *
 
