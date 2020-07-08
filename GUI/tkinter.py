@@ -1,7 +1,6 @@
 #PyMessage GUI
 #Rylee Carter
 #July 7th, 2020
-
 #Importing main tkinter libs
 from tkinter import *
 
