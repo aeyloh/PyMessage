@@ -9,13 +9,16 @@ from tkinter import *
 #Importing functions
 from GUIFunctions import *
 
+#Defining vars
+chatInput = ""
+
 class Window:
     #Defining settings upon initialization
     def __init__(self, master):
         self.master = master
 
         #Changing title of the window
-        master.title("PyMessage v0.0.1")
+        master.title("PyMessage Pre-Alpha")
 
         #Creating a menu instance
         menu = Menu(master)
@@ -46,6 +49,24 @@ class Window:
         menu.add_cascade(label = "File", menu = file)
         menu.add_cascade(label = "Options", menu = option)
         menu.add_cascade(label = "About", menu = about)
+
+        #Creating mainCanvas
+        mainCanvas = Canvas(root, width = 1000, height = 720)
+        mainCanvas.pack()
+
+        #Creating chat input box
+        chatInputBox = Entry(root, justify = LEFT, width = 150)
+        mainCanvas.create_window(400, 700, window = chatInputBox)
+        sendChat = Button(text = "Send", command = lambda: getChatInput(chatInputBox))
+        mainCanvas.create_window(1020, 700, window = sendChat)
+
+#Local functions
+
+#Reading from the user entry box
+def getChatInput(chatInputBox):
+    chatInput = chatInputBox.get()
+    print(chatInput)
+    print("Send button pressed!")
 
 #Not sure what this does, sometimes people put it at the beginning of the program
 #but it works here too
