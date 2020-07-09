@@ -34,13 +34,13 @@ class Window:
         option.add_command(label = "Change Username", command = emptyFunction)
         #Adding commands to 'About' section of toolbar
         about.add_command(label = "Aeyloh")
-        file.add_separator()
-        about.add_command(label = "Twitter", command = emptyFunction)
-        file.add_separator()
+        about.add_separator()
+        about.add_command(label = "Twitter", command = openTwitterAeyloh)
+        about.add_separator()
         about.add_command(label = "NorthHopper")
-        file.add_separator()
-        about.add_command(label = "Twitter", command = lambda:openTwitterHopper)
-        file.add_separator()
+        about.add_separator()
+        about.add_command(label = "Twitter", command = openTwitterHopper)
+        about.add_separator()
 
         #Adding all options to the toolbar
         menu.add_cascade(label = "File", menu = file)
